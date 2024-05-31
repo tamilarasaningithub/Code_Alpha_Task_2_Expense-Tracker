@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTX2eHKYkM8Tv1QBTvNhN6AL4BjpbX1ehpJv2/6yo5UHRyugQlm2V8DWhz6E3KlbuqEL4y6Dg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <div id="totalExpense">Total Expense: $0</div>
+    <form id="expenseForm">
+      <input type="text" id="expenseDescription" placeholder="Expense Description" required>
+      <input type="number" id="expenseAmount" placeholder="Expense Amount" required>
+      <select id="expenseCategory" required>
+        <option value="">Select Category</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit"><i class="fas fa-plus"></i> Add Expense</button>
+    </form>
+    <div>
+      <label for="filterCategory">Filter by Category: </label>
+      <select id="filterCategory">
+        <option value="">All</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <ul id="expenseList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
